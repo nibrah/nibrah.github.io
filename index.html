@@ -1,12 +1,45 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Jargal Linux</title>
-  <meta http-equiv="refresh" content="0;URL='https://www.123pan.com/s/8KCaTd-OtEBh.html'">
-</head>
-<body>
-	<p>Redirecting</p>
-</body>
-</html>
-
+git init
+git config --global user.name "xingmingpinyin"
+git config --global user.email "xingmingpinyin@xingmingpinyin.com"
+git config --global color.ui "always"
+git config --global --list
+git add exam.txt
+git commit -m "for the 1st time, create exam.txt file"
+git add -i
+git diff --cached
+git commit -m "for the 2nd time , edit the exam.txt file"
+git checkout -b rb_1.0
+git commit -a -m "for the 3rd time, edit exam.txt file"
+git checkout master
+git commit -m "for the 3rd time，edit exam.txt file"
+git add exam.txt
+git commit -m "for the 4th time，edit exam.txt file"
+git branch rb_2.0
+git checkout rb_2.0
+git tag 1.0 rb_1.0
+git tag 2.0 rb_2.0
+git tag
+git checkout -b rb_3.0
+git branch -D rb_1.0
+git branch -m rb_2.0 rb_2.0.0
+git branch
+git checkout rb_2.0.0
+git log --pretty=oneline
+git checkout master
+git cherry-pick 3f00bda
+git cherry-pick dfb2384
+git blame -L 2,3 exam.txt
+git mv exam.txt xingmingpinyin.txt
+git commit -m "for the 12th time，rename exam.txt to xingmingpinyin.txt"
+git log --format="%an"
+git log HEAD~4 -i
+git checkout rb_3.0
+git log --pretty=oneline -4
+git rebase -i HEAD~3
+git rebase -i HEAD~3
+git status
+git branch rb_1.0.0 1.0
+git branch
+git gc
+git checkout master
+git archive --format=zip --prefix=master/ HEAD > git.zip
